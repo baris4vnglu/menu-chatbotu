@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barışın Restoranı</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="site">
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-icon">🍽️</span>
+        <div class="brand-text">
+          <h1 id="siteTitle">Barışın Restoranı</h1>
+          <p id="siteTagline">Geleneksel lezzetler, modern sunum</p>
+        </div>
+      </div>
+      <button id="langToggle" class="lang-btn" type="button">
+        <span class="lang-option active" data-lang="tr">TR</span>
+        <span class="lang-sep">|</span>
+        <span class="lang-option" data-lang="en">EN</span>
+      </button>
+    </header>
+
+    <main class="menu-main">
+      <div id="menuContainer" class="menu-container">
+        <p class="menu-loading" id="menuLoading">Menü yükleniyor...</p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p id="footerText">Barışın Restoranı — sorularınız için sağ alttaki asistanı kullanabilirsiniz.</p>
+    </footer>
+  </div>
+
+  <div class="chat-widget">
+    <div id="chatPanel" class="chat-panel hidden">
+      <div class="chat-panel-header">
+        <div class="chat-panel-title">
+          <span class="chat-panel-icon">🍽️</span>
+          <span id="chatBrand">Barışın Restoranı Asistanı</span>
+        </div>
+        <div class="chat-panel-actions">
+          <button id="clearBtn" class="icon-btn" type="button" title="Temizle">🗑️</button>
+          <button id="widgetClose" class="icon-btn" type="button" title="Kapat">✕</button>
+        </div>
+      </div>
+
+      <div class="chat-body">
+        <div id="chatWindow" class="chat-window" aria-live="polite"></div>
+        <div id="emptyState" class="empty-state">
+          <div class="empty-icon">💬</div>
+          <p id="emptyText">Menümüz hakkında soru sorarak başlayın.</p>
+        </div>
+      </div>
+
+      <div class="composer">
+        <input
+          id="messageInput"
+          type="text"
+          autocomplete="off"
+          placeholder="Bir mesaj yazın..."
+        />
+        <button id="sendBtn" class="send-btn" type="button">Gönder</button>
+      </div>
+    </div>
+
+    <button id="widgetToggle" class="widget-toggle" type="button" aria-label="Sohbeti aç">
+      <span id="widgetToggleIcon">💬</span>
+    </button>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
